@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Restaurant Menu</title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #f4e1c1;
+            padding: 20px;
+        }
+        .menu {
+            width: 400px;
+            height: 550px;
+            padding: 20px;
+            margin: 10px;
+            border: 5px solid #8b0000;
+			color: white;
+			text-shadow:
+			    -1px -1px 0 #000,
+			    1px -1px 0 #000,
+			    -1px 1px 0 #000,
+			    1px 1px 0 #000;
+            text-align: center;
+            font-size: 25px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        .breakfast {
+            background-image: url('Breakfast.jpg');
+            opacity: 1; 
+        }
+        .lunch {
+            background-image: url('Lunch.jpg');
+            opacity: 1;
+        }
+        .dinner {
+            background-image: url('Dinner.jpg');
+            opacity: 1;
+        }
+        h2 {
+            margin-top: 0;
+            padding: 10px;
+            background: rgba(139, 0, 0, 0.7);
+            font-family: 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="italian-flag.jpg" alt="Italian Flag" width="100">
+        <h1 style="font-family: 'Times New Roman', serif; color: #8b0000;"> Italian Menu</h1>
+    </div>
+    <div class="menu breakfast">
+      <h2>Breakfast</h2>
+      <p>Pancakes- $8.00</p>
+      <p>French toast - $8.99</p>
+      <p>Belgian Waffle - $9.50</p>
+      <p>Chia seed pudding - $5.99</p>
+    </div>
+    
+    <div class="menu lunch">
+    <h2>Lunch</h2>
+    <p>Lasagna - $12.99</p>
+    <p>Spaghetti Carbonara - $11.99</p>
+    <p>Risotto ai Funghi - $13.50</p>
+    <p>Pizza margherita- $10.99</p>
+    </div>
+    
+    <div class="menu dinner">
+       <h2>Dinner</h2>
+       <p>Chicken pasta - $12.99</p>
+       <p>Chicken Parmigiana - $16.50</p>
+       <p>Bistecca alla Fiorentina - $22.99</p>
+       <p>Grilled Branzino - $19.99</p>
+    </div>
+</body>
+</html>
