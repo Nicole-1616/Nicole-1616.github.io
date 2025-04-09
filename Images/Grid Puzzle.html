@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid and Flexbox Puzzle</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #b8d1e7;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #0961ae;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr 2fr; 
+                grid-template-areas:
+                    "identification puzzle"
+                    "details      puzzle";
+            }
+
+            .identification {
+                grid-area: identification;
+            }
+
+            .puzzle-container {
+                grid-area: puzzle;
+            }
+
+            .assignment-details {
+                grid-area: details;
+            }
+        }
+
+        .identification, .puzzle-container, .assignment-details {
+            padding: 15px;
+            border: 1px solid #64a6e3;
+            border-radius: 4px;
+            background-color: #8fbfec;
+        }
+
+        .puzzle-container h2 {
+            margin-top: 0;
+        }
+
+        .flex-puzzle {
+            display: flex;
+            flex-wrap: wrap; 
+            width: 400px; 
+            height: 400px;
+            border: 1px solid #8fbfec;
+            margin-top: 10px;
+        }
+
+        .flex-puzzle img {
+            width: calc(25% - 2px); 
+            height: calc(25% - 2px); 
+            border: 1px solid #64a6e3;
+            box-sizing: border-box; 
+        }
+
+      
+        .flex-puzzle img:nth-child(1) { order: 3; }
+        .flex-puzzle img:nth-child(2) { order: 7; }
+        .flex-puzzle img:nth-child(3) { order: 12; }
+        .flex-puzzle img:nth-child(4) { order: 10; }
+        .flex-puzzle img:nth-child(5) { order: 14; }
+        .flex-puzzle img:nth-child(6) { order: 2; }
+        .flex-puzzle img:nth-child(7) { order: 8; }
+        .flex-puzzle img:nth-child(8) { order: 13; }
+        .flex-puzzle img:nth-child(9) { order: 4; }
+        .flex-puzzle img:nth-child(10) { order: 16; }
+        .flex-puzzle img:nth-child(11) { order: 15; }
+        .flex-puzzle img:nth-child(12) { order: 5; }
+        .flex-puzzle img:nth-child(13) { order: 11; }
+        .flex-puzzle img:nth-child(14) { order: 9; }
+        .flex-puzzle img:nth-child(15) { order: 6; }
+		.flex-puzzle img:nth-child(16) { order: 1; }
+
+        .wrong-piece {
+            display: none; 
+        }
+
+        .assignment-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .assignment-details li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <section class="identification">
+            <h2>About Me and the Puzzle</h2>
+            <p><strong>Name:</strong>Nicole Maya</p>
+            <p><strong>Puzzle:</strong> Butterflies</p>
+        </section>
+
+        <section class="puzzle-container">
+            <h2>Butterfly Puzzle</h2>
+            <div class="flex-puzzle">
+                <img src="puzzle1_A.jpg" alt="Puzzle Piece 1">
+                <img src="puzzle1_B.jpg" alt="Puzzle Piece 2">
+                <img src="puzzle1_C.jpg" alt="Puzzle Piece 3">
+                <img src="puzzle1_E.jpg" alt="Puzzle Piece 4">
+                <img src="puzzle1_F.jpg" alt="Puzzle Piece 5">
+                <img src="puzzle1_G.jpg" alt="Puzzle Piece 6">
+                <img src="puzzle1_H.jpg" alt="Puzzle Piece 7">
+                <img src="puzzle1_I.jpg" alt="Puzzle Piece 8">
+                <img src="puzzle1_J.jpg" alt="Puzzle Piece 9">
+                <img src="puzzle1_K.jpg" alt="Puzzle Piece 10">
+                <img src="puzzle1_L.jpg" alt="Puzzle Piece 11">
+                <img src="puzzle1_M.jpg" alt="Puzzle Piece 12">
+                <img src="puzzle1_N.jpg" alt="Puzzle Piece 13">
+                <img src="puzzle1_O.jpg" alt="Puzzle Piece 14">
+                <img src="puzzle1_P.jpg" alt="Puzzle Piece 15">
+				<img src="puzzle1_Q.jpg" alt="Puzzle Piece 16">
+                <img src="butterfly_wrong.jpg" alt="Wrong Piece" class="wrong-piece">
+            </div>
+        </section>
+
+        <section class="assignment-details">
+            <h2>Assignment Details</h2>
+            <ul>
+                <li>Flex container properties were used to solve the puzzle.</li>
+                <li>The <code>display</code> property is used to hide the faulty puzzle piece.</li>
+                <li>The puzzle is solved correctly.</li>
+                <li>The puzzle piece files are kept in an <code>images</code> folder.</li>
+                <li><strong>Date Completed:</strong> April 8, 2025</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
