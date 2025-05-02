@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Imitation</title>
+  <style>
+    body {
+      background-color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-box {
+      position: relative;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+
+    .dinosaur img {
+		filter: hue-rotate(90deg) drop-shadow(10px 5px 1px #000);
+		display: block;
+		margin: auto;
+	  
+    }
+
+
+    .butterfly img {
+     filter: invert(100%);
+      border: 5px solid black;
+      border-top-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+    }
+
+
+    .seagull img {
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+    }
+	
+    .seagull {
+	  background: linear-gradient(to bottom right, #8b8bfe, white);
+	  
+    }
+
+    
+    .pinguins img {
+      filter: sepia(100%);
+      border: 5px solid #555;
+      border-radius: 50%;
+    }
+
+   
+    .theater img {
+      filter: blur(3px);
+    }
+    .theater .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2em;
+      text-shadow: 2px 2px 5px black;
+      pointer-events: none;
+    }
+
+   
+    .football-tictac {
+      border: 20px solid transparent;
+      padding: 0;
+      border-image: url('tic-tac-toe.png') 50 round;
+      display: inline-block;
+    }
+    .football-tictac img {
+      filter: saturate(0%);
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Imitation</h1>
+
+  <div class="gallery">
+
+    <!-- Dinosaur -->
+   <div class="image-box dinosaur">
+     <img src="dinosaur.png" alt="Dinosaur">
+     <div class="label">Dinosaur</div>
+   </div>
+
+    <!-- Butterfly -->
+    <div class="image-box butterfly">
+      <img src="butterfly.jpg" alt="Butterfly">
+      <div class="label">Butterfly</div>
+    </div>
+
+    <!-- Seagull -->
+   <div class="image-box seagull">
+     <div class="seagull">
+       <img src="seagull.png" alt="Seagull">
+     </div>
+     <div class="label">Seagull</div>
+   </div>
+
+    <!-- Pinguins -->
+    <div class="image-box pinguins">
+      <img src="penguins.jpg" alt="Pinguins">
+      <div class="label">Pinguins</div>
+    </div>
+
+    <!-- Theater -->
+    <div class="image-box theater">
+      <img src="theater_stage.jpg" alt="Theater">
+      <div class="overlay-text">Presenting</div>
+      <div class="label">Theater</div>
+    </div>
+
+    <!-- Football plus Tic Tac -->
+    <div class="image-box">
+      <div class="football-tictac">
+        <img src="football_field.jpg" alt="Football plus Tic Tac">
+      </div>
+      <div class="label">Football plus Tic Tac</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
