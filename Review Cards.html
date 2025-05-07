@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flashcards</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F8F3F1; 
+      color: #A07879; 
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 2.5em;
+      color: #B9B5B7; 
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .card {
+      width: 280px;
+      height: 200px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+      background-color: #E9D7D9; 
+    }
+
+    .card:nth-child(even) {
+      background-color: #CDA5A6; /
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .question {
+      padding: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #A07879; 
+    }
+
+    .answer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #A07879; 
+      color: #F8F3F1; 
+      padding: 15px;
+      font-size: 1.3em;
+      text-align: center;
+      transform: translateY(100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+      font-weight: 600;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .card:hover .answer {
+      transform: translateY(0%);
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Transitions & Animations Review</h1>
+
+  <div class="container">
+    <div class="card">
+      <div class="question">What are transitions and animations used for?</div>
+      <div class="answer">To implement more visual activity and interest to a web page.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">transition-property</div>
+      <div class="answer">Specifies which CSS property will animate.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">transition-duration</div>
+      <div class="answer">Sets how long the transition takes to complete.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">What does "ease-in-out" do?</div>
+      <div class="answer">Starts and ends slow, but is faster in the middle.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">animation-name</div>
+      <div class="answer">Connects a keyframes rule to an element.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">animation-iteration-count</div>
+      <div class="answer">Sets how many times the animation will repeat.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">Difference between transition & animation?</div>
+      <div class="answer">Transitions go from one state to another, animations have multiple steps.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">What does @keyframes do?</div>
+      <div class="answer">Defines stages of a CSS animation.</div>
+    </div>
+  </div>
+
+</body>
+</html>
